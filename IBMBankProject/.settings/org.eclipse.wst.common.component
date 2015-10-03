@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="IBMBankProject">
+        <wb-resource deploy-path="/" source-path="/apps/IBMBankApp/common"/>
+        <wb-resource deploy-path="/" source-path="/apps/IBMBankApp/android"/>
+        <property name="context-root" value="IBMBankProject"/>
+    </wb-module>
+</project-modules>
