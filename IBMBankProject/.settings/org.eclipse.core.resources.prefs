@@ -7,7 +7,6 @@ base.iphone=2170286215
 base.windowsphone8=1382597216
 common.android=2602476710
 eclipse.preferences.version=1
-encoding//apps/IBMBankApp/android/css/main.css=UTF-8
 encoding//apps/IBMBankApp/common/css/main.css=UTF-8
 encoding//apps/IBMBankApp/common/index.html=ISO-8859-1
 encoding/<project>=UTF-8
