@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.IBMBankApp" android:versionCode="1" android:versionName="1.0">  
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.IBMBankApp">  
     <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="21"/>  
-    <supports-screens android:smallScreens="false" android:normalScreens="true" android:largeScreens="false"/>  
+    <supports-screens android:largeScreens="false" android:normalScreens="true" android:smallScreens="false"/>  
     <uses-permission android:name="android.permission.INTERNET"/>  
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>  
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>  
@@ -14,8 +13,14 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS"/>  
     <uses-permission android:name="android.permission.USE_CREDENTIALS"/>  
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>  
-    <application android:label="@string/app_name" android:icon="@drawable/icon"> 
-        <activity android:name=".IBMBankApp" android:label="@string/app_name" android:configChanges="orientation|keyboardHidden|screenSize" android:launchMode="singleTask" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:screenOrientation="sensor"> 
+    <!--BEGIN ANDROID USER-PERMISSION AUTOINSERTION FOR MQA-Android -->
+<uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!--END ANDROID USER-PERMISSION AUTOINSERTION FOR MQA-Android -->
+
+<application android:icon="@drawable/icon" android:label="@string/app_name"> 
+        <activity android:configChanges="orientation|keyboardHidden|screenSize" android:label="@string/app_name" android:launchMode="singleTask" android:name=".IBMBankApp" android:screenOrientation="sensor" android:theme="@android:style/Theme.Translucent.NoTitleBar"> 
             <intent-filter> 
                 <action android:name="android.intent.action.MAIN"/>  
                 <category android:name="android.intent.category.LAUNCHER"/> 
@@ -26,9 +31,19 @@
             </intent-filter> 
         </activity>  
         <!-- Preference Activity  -->  
-        <activity android:name="com.worklight.common.WLSettingActivity" android:label="Worklight Settings"></activity>  
+        <activity android:label="Worklight Settings" android:name="com.worklight.common.WLSettingActivity"/>  
         <!-- UI Activity for displaying native dialogs  -->  
-        <activity android:name="com.worklight.wlclient.ui.UIActivity"/>  
+        <activity android:name="com.worklight.wlclient.ui.UIActivity"/>
+<!--BEGIN ANDROID ACTIVITY AUTOINSERTION FOR MQA-Android -->
+                
+                <!-- MQA activities -->
+                    <activity android:name="com.ibm.mqa.ui.ProblemActivity"/>
+                    <activity android:name="com.ibm.mqa.ui.FeedbackActivity"/>
+                    <activity android:name="com.ibm.mqa.ui.ScreenshotEditorActivity"/>
+                
+            <!--END ANDROID ACTIVITY AUTOINSERTION FOR MQA-Android -->
+
+  
         <!-- Push service  -->  
         <!-- In order to use the c2dm library, an application must declare a class with the name C2DMReceiver, in its own package, extending com.google.android.c2dm.C2DMBaseReceiver 
 			It must also include this section in the manifest, replacing "com.google.android.apps.chrometophone" with its package name. -->  
