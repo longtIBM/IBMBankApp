@@ -101,8 +101,8 @@ function getAccountDetails(interest) {
 		    ]
 		};
 	
-	return JSON.parse(accountDetailsJSONstr);
-	//return accountDetailsJSONstr;
+	//return JSON.parse(accountDetailsJSONstr);
+	return accountDetailsJSONstr;
 
 
 }
