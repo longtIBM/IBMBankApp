@@ -108,7 +108,7 @@ function getAccountDetails(interest) {
 }
 
 /**
- * Example code for invoking a HTTP backend service 
+ * Example codes for invoking a HTTP backend service 
  * @param account
  *          a string representing the account number
  * @returns json list of items
