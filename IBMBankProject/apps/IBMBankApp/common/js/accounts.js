@@ -73,9 +73,9 @@ $('#accountList').on('click', 'li', function() {
 		transition : "slide"
 	});
 	
-//	doGetAccountDetailsStatic(acctId);  // uses array
+	doGetAccountDetailsStatic(acctId);  // uses array
 	
-	doGetAccountDetails(acctId);        // uses Adapter
+//	doGetAccountDetails(acctId);        // uses Adapter
 	
 });
 
